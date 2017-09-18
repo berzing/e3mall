@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [13/Aug/2017:23:44:00 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8088-exec-1 137
+0:0:0:0:0:0:0:1 - - [13/Aug/2017:23:44:05 +0800] "GET /page/register HTTP/1.1" 200 8104 http-bio-8088-exec-2 1232
+0:0:0:0:0:0:0:1 - - [13/Aug/2017:23:44:05 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8088-exec-8 3
+0:0:0:0:0:0:0:1 - - [13/Aug/2017:23:44:08 +0800] "GET /page/login HTTP/1.1" 200 10129 http-bio-8088-exec-9 385
+0:0:0:0:0:0:0:1 - - [13/Aug/2017:23:44:22 +0800] "POST /user/login HTTP/1.1" 200 82 http-bio-8088-exec-10 1566
+0:0:0:0:0:0:0:1 - - [13/Aug/2017:23:44:23 +0800] "GET /images/productinfo.png HTTP/1.1" 404 949 http-bio-8088-exec-10 16
+0:0:0:0:0:0:0:1 - - [13/Aug/2017:23:46:12 +0800] "GET /user/token/c5b47105-00e9-48ae-a1de-3a49e25b6a37 HTTP/1.1" 200 172 http-bio-8088-exec-8 127
+0:0:0:0:0:0:0:1 - - [13/Aug/2017:23:46:22 +0800] "GET /user/token/c5b47105-00e9-48ae-a1de-3a49e25b6a36 HTTP/1.1" 200 70 http-bio-8088-exec-8 29

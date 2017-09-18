@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>e3-parent</artifactId>
+        <groupId>cn.e3mall</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../e3-parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>e3-manager</artifactId>
+    <!--聚合工程打包方式都应是pom  而不是默认的jar-->
+    <packaging>pom</packaging>
+
+
+    <modules>
+        <module>e3-manager-pojo</module>
+        <module>e3-manager-dao</module>
+        <module>e3-manager-interface</module>
+        <module>e3-manager-service</module>
+    </modules>
+
+    <!--依赖e3-common-->
+    <dependencies>
+        <dependency>
+            <groupId>cn.e3mall</groupId>
+            <artifactId>e3-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <!--配置tomcat插件-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <configuration>
+                    <!--'/'表示运行时不带工程名-->
+                    <path>/</path>
+                    <port>8080</port>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

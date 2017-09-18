@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!--
+注意  mapper文件名称应该接口名称一致  mapper文件中的namespace名称应该是接口的全限定名
+然后id就是接口中的方法名  resultType为接口方法返回值SearchItem的全限定名
+-->
+<mapper namespace="cn.e3mall.search.mapper.ItemMapper" >
+  <select id="getItemList" resultType="cn.e3mall.common.pojo.SearchItem">
+    SELECT
+      a.id,
+      a.title,
+      a.sell_point,
+      a.price,
+      a.image,
+      b. NAME category_name
+    FROM
+	  tb_item a
+    LEFT JOIN tb_item_cat b ON a.cid = b.id
+    WHERE
+	  a.`status` = 1
+  </select>
+
+  <!--添加商品并同步到索引库(通过商品id查询商品信息)-->
+  <select id="getItemById" parameterType="long" resultType="cn.e3mall.common.pojo.SearchItem">
+    SELECT
+      a.id,
+      a.title,
+      a.sell_point,
+      a.price,
+      a.image,
+      b. NAME category_name
+    FROM
+	  tb_item a
+    LEFT JOIN tb_item_cat b ON a.cid = b.id
+    WHERE
+	  a.`status` = 1
+	  AND a.id=#{itemid}
+  </select>
+</mapper>
