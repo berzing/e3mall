@@ -42,8 +42,8 @@ e3-search-web,e3-search 搜索系统
 
 e3-sso-web,e3-sso 单点登录系统
 
-fastdfs_client 图片上传服务器
+fastdfs_client 图片上传
 
-generatorSqlmapCustom mybatis逆向工程
+generatorSqlmapCustom 逆向工程
 
-pagehelper mybatis分页插件
+pagehelper 分页插件
